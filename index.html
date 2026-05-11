@@ -519,14 +519,12 @@
     // ============================================================
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5clVvltxa3qtvpGLasz9t8oF-PNwcPlUMeeiR76IAAhR01D68TY88V6Xoy7EtAYe7oQ/exec';
 
-    if (SCRIPT_URL !== 'https://script.google.com/macros/s/AKfycbx5clVvltxa3qtvpGLasz9t8oF-PNwcPlUMeeiR76IAAhR01D68TY88V6Xoy7EtAYe7oQ/exec') {
-      fetch(SCRIPT_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'text/plain' },
-        body: JSON.stringify(data)
-      });
-    }
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain' },
+      body: JSON.stringify(data)
+    });
 
     document.getElementById('formContent').style.display = 'none';
     document.getElementById('successMsg').style.display  = 'block';

@@ -3,305 +3,345 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>직장인 절세 체크리스트 무료 다운로드 | 머니멘토</title>
+  <title>재정 건강 무료 체크업 | 노후·가계 재정 진단</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
-      background: #f8fafc; color: #1e293b; line-height: 1.6;
+      background: #f5f7fa;
+      color: #222;
+      line-height: 1.6;
     }
+
+    /* 광고 상단 표시 바 */
+    .ad-notice {
+      background: #1e293b;
+      color: #94a3b8;
+      text-align: center;
+      padding: 7px 16px;
+      font-size: 11px;
+      letter-spacing: 0.3px;
+    }
+    .ad-notice strong { color: #cbd5e1; }
 
     /* HERO */
     .hero {
-      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
-      color: white; text-align: center; padding: 60px 20px 72px;
+      background: linear-gradient(135deg, #0f4c81 0%, #1d6fa4 100%);
+      color: white;
+      text-align: center;
+      padding: 64px 20px 76px;
     }
-    .hero .channel-tag {
+    .hero .badge {
       display: inline-block;
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: 20px; padding: 5px 16px;
-      font-size: 12px; margin-bottom: 18px; letter-spacing: 0.4px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      padding: 6px 18px;
+      font-size: 13px;
+      margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: clamp(22px, 5vw, 38px);
-      font-weight: 800; line-height: 1.3; margin-bottom: 14px;
+      font-size: clamp(24px, 5vw, 40px);
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 16px;
     }
-    .hero h1 em { color: #fbbf24; font-style: normal; }
-    .hero .desc { font-size: clamp(13px, 2vw, 16px); opacity: 0.85; margin-bottom: 8px; }
-    .hero .sub  { font-size: 12px; opacity: 0.6; margin-bottom: 32px; }
+    .hero h1 span { color: #fbbf24; }
+    .hero p {
+      font-size: clamp(14px, 2.5vw, 17px);
+      opacity: 0.88;
+      margin-bottom: 10px;
+    }
+    .hero .sub {
+      font-size: 13px;
+      opacity: 0.65;
+      margin-bottom: 34px;
+    }
+    .hero-arrow { font-size: 26px; animation: bounce 1.5s infinite; }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(8px); }
+    }
 
-    /* PDF Preview box */
-    .pdf-preview {
-      display: inline-flex; align-items: center; gap: 14px;
-      background: rgba(255,255,255,0.12);
-      border: 1.5px solid rgba(255,255,255,0.3);
-      border-radius: 14px; padding: 14px 22px; margin-bottom: 28px;
-      text-align: left; max-width: 400px;
+    /* TRUST */
+    .trust {
+      background: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 18px 20px;
+      border-bottom: 1px solid #e5e7eb;
     }
-    .pdf-icon { font-size: 38px; flex-shrink: 0; }
-    .pdf-info .pdf-title { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
-    .pdf-info .pdf-meta  { font-size: 12px; opacity: 0.7; }
-
-    .hero-arrow { font-size: 24px; animation: bounce 1.5s infinite; }
-    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
-
-    /* STATS */
-    .stats {
-      background: white; display: flex; justify-content: center;
-      flex-wrap: wrap; gap: 0; border-bottom: 1px solid #e2e8f0;
-    }
-    .stat-item {
-      padding: 16px 28px; text-align: center;
-      border-right: 1px solid #e2e8f0;
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num  { font-size: 22px; font-weight: 800; color: #1d4ed8; }
-    .stat-label{ font-size: 12px; color: #64748b; margin-top: 2px; }
+    .trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; }
+    .trust-item .icon { font-size: 17px; }
 
     /* SECTIONS */
-    .section-white { background: white; }
-    .section-gray  { background: #f8fafc; }
-    .sw { padding: 46px 20px; }
-    .si { max-width: 700px; margin: 0 auto; }
-    h2 { font-size: clamp(18px, 3.5vw, 26px); font-weight: 700; text-align: center; margin-bottom: 6px; }
-    .sub2 { text-align: center; color: #64748b; font-size: 14px; margin-bottom: 28px; }
+    .section-bg-white { background: white; }
+    .section-bg-gray  { background: #f5f7fa; }
+    .section-wrapper  { padding: 48px 20px; }
+    .section-inner    { max-width: 720px; margin: 0 auto; }
 
-    /* PREVIEW ITEMS */
-    .preview-grid { display: flex; flex-direction: column; gap: 10px; }
-    .preview-item {
-      background: #f8fafc; border: 1px solid #e2e8f0;
-      border-radius: 10px; padding: 14px 16px;
+    h2 { font-size: clamp(19px, 4vw, 27px); font-weight: 700; text-align: center; margin-bottom: 8px; }
+    .subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 30px; }
+
+    /* CHECKLIST */
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .check-list li {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px 18px;
       display: flex; align-items: flex-start; gap: 12px;
+      font-size: 15px;
     }
-    .preview-item .emoji { font-size: 20px; flex-shrink: 0; }
-    .preview-item h4 { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
-    .preview-item p  { font-size: 13px; color: #64748b; }
-    .preview-item .badge {
-      margin-left: auto; flex-shrink: 0;
-      background: #dbeafe; color: #1d4ed8;
-      font-size: 11px; font-weight: 700;
-      padding: 3px 8px; border-radius: 6px;
-    }
+    .check-list .emoji { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
 
-    /* BLUR PREVIEW */
-    .blur-section {
-      position: relative; overflow: hidden;
-      border-radius: 10px; margin-top: 6px;
+    /* TOPICS GRID */
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
     }
-    .blur-inner { filter: blur(5px); pointer-events: none; user-select: none; }
-    .blur-overlay {
-      position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
-      background: rgba(255,255,255,0.55);
+    .topic-card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px 16px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border: 2px solid transparent;
+      transition: border-color 0.2s;
     }
-    .blur-cta-btn {
-      background: #1d4ed8; color: white;
-      padding: 12px 24px; border-radius: 10px;
-      font-size: 14px; font-weight: 700;
-      cursor: pointer; border: none;
-      box-shadow: 0 4px 16px rgba(29,78,216,0.3);
+    .topic-card:hover { border-color: #1d6fa4; }
+    .topic-card .icon { font-size: 30px; margin-bottom: 10px; }
+    .topic-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+    .topic-card p  { font-size: 12px; color: #777; }
+
+    /* PROCESS */
+    .process-steps { display: flex; flex-direction: column; gap: 14px; }
+    .step {
+      background: white; border-radius: 12px; padding: 18px 20px;
+      display: flex; align-items: flex-start; gap: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
+    .step-num {
+      width: 38px; height: 38px; background: #1d6fa4; color: white;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 15px; flex-shrink: 0;
+    }
+    .step-content h3 { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+    .step-content p  { font-size: 13px; color: #555; }
 
     /* FORM */
-    .form-section {
-      background: linear-gradient(135deg, #1e3a8a 0%, #1d4ed8 100%);
-      padding: 46px 20px;
-    }
-    .form-box {
-      max-width: 520px; margin: 0 auto;
+    .form-section { background: linear-gradient(135deg, #0f4c81 0%, #1d6fa4 100%); padding: 48px 20px; }
+    .form-container {
+      max-width: 560px; margin: 0 auto;
       background: white; border-radius: 20px;
-      padding: 32px 28px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+      padding: 34px 30px; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
     }
-    .form-box h2 { font-size: 20px; margin-bottom: 4px; }
-    .form-sub { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 22px; }
+    .form-container h2 { font-size: 21px; font-weight: 800; margin-bottom: 6px; }
+    .form-sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 26px; }
 
-    .form-group { margin-bottom: 14px; }
-    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; }
-    .req { color: #ef4444; margin-left: 2px; }
-    .form-group input, .form-group select {
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333; }
+    .form-group label .req { color: #ef4444; margin-left: 2px; }
+    .form-group input, .form-group select, .form-group textarea {
       width: 100%; padding: 11px 13px;
-      border: 1.5px solid #cbd5e1; border-radius: 8px;
+      border: 1.5px solid #d1d5db; border-radius: 8px;
       font-size: 14px; font-family: inherit;
-      background: #f8fafc; transition: border-color 0.2s;
+      transition: border-color 0.2s; background: #fafafa;
     }
-    .form-group input:focus, .form-group select:focus {
-      outline: none; border-color: #1d4ed8; background: white;
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      outline: none; border-color: #1d6fa4; background: white;
     }
 
-    /* 동의 */
-    .consent-box {
-      background: #f8fafc; border: 1.5px solid #e2e8f0;
-      border-radius: 10px; padding: 14px; margin-bottom: 14px;
+    .checkbox-group {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px;
     }
-    .consent-title { font-size: 12px; font-weight: 700; color: #475569; margin-bottom: 10px; }
-    .consent-row {
+    .checkbox-item {
+      display: flex; align-items: center; gap: 7px;
+      background: #f3f4f6; border-radius: 8px; padding: 9px 11px;
+      cursor: pointer; border: 1.5px solid transparent; transition: all 0.15s;
+    }
+    .checkbox-item:hover { background: #eff6ff; border-color: #93c5fd; }
+    .checkbox-item input[type="checkbox"] { width: 15px; height: 15px; accent-color: #1d6fa4; }
+    .checkbox-item span { font-size: 12px; font-weight: 500; }
+
+    /* 동의 영역 */
+    .consent-box {
+      background: #f8fafc;
+      border: 1.5px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .consent-box .consent-title {
+      font-size: 13px; font-weight: 700; color: #334155;
+      margin-bottom: 10px; padding-bottom: 8px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .consent-item {
       display: flex; align-items: flex-start; gap: 8px;
       margin-bottom: 8px; cursor: pointer;
     }
-    .consent-row:last-child { margin-bottom: 0; }
-    .consent-row input { width: 15px; height: 15px; margin-top: 2px; accent-color: #1d4ed8; flex-shrink: 0; }
-    .consent-row span { font-size: 11.5px; color: #475569; line-height: 1.5; }
-    .badge-req { background:#ef4444; color:white; font-size:10px; padding:1px 5px; border-radius:3px; margin-left:3px; }
-    .badge-opt { background:#94a3b8; color:white; font-size:10px; padding:1px 5px; border-radius:3px; margin-left:3px; }
-    .consent-detail { color:#94a3b8; font-size:10.5px; }
+    .consent-item:last-child { margin-bottom: 0; }
+    .consent-item input[type="checkbox"] {
+      width: 15px; height: 15px; margin-top: 2px;
+      accent-color: #1d6fa4; flex-shrink: 0;
+    }
+    .consent-item .consent-text { font-size: 12px; color: #555; line-height: 1.5; }
+    .consent-item .consent-text strong { color: #334155; }
+    .consent-item .req-badge {
+      display: inline-block; background: #ef4444; color: white;
+      font-size: 10px; padding: 1px 5px; border-radius: 3px;
+      margin-left: 4px; vertical-align: middle;
+    }
+    .consent-item .opt-badge {
+      display: inline-block; background: #64748b; color: white;
+      font-size: 10px; padding: 1px 5px; border-radius: 3px;
+      margin-left: 4px; vertical-align: middle;
+    }
 
     .submit-btn {
-      width: 100%; padding: 14px;
-      background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
+      width: 100%; padding: 15px;
+      background: linear-gradient(135deg, #0f4c81 0%, #1d6fa4 100%);
       color: white; border: none; border-radius: 10px;
-      font-size: 15px; font-weight: 700; cursor: pointer;
+      font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 6px;
       transition: opacity 0.2s, transform 0.1s;
     }
-    .submit-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-    .privacy-note { text-align:center; font-size:11px; color:#94a3b8; margin-top:10px; }
+    .submit-btn:hover { opacity: 0.92; transform: translateY(-1px); }
+    .submit-btn:active { transform: translateY(0); }
+    .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .privacy-note { text-align: center; font-size: 11px; color: #999; margin-top: 12px; }
 
     /* SUCCESS */
-    .success { display:none; text-align:center; padding:24px 0; }
-    .success .big { font-size:52px; margin-bottom:12px; }
-    .success h3 { font-size:20px; font-weight:800; margin-bottom:8px; }
-    .success p  { color:#475569; font-size:14px; line-height:1.7; }
-    .download-btn {
-      display: inline-block; margin-top: 18px;
-      background: #16a34a; color: white;
-      padding: 13px 30px; border-radius: 10px;
-      font-size: 15px; font-weight: 700;
-      text-decoration: none; cursor: pointer;
-    }
-
-    /* ABOUT */
-    .about-card {
-      display: flex; align-items: center; gap: 20px;
-      background: white; border: 1px solid #e2e8f0;
-      border-radius: 14px; padding: 22px;
-    }
-    .about-avatar {
-      width: 70px; height: 70px; border-radius: 50%;
-      background: linear-gradient(135deg, #1e3a8a, #1d4ed8);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 30px; flex-shrink: 0;
-    }
-    .about-info h3 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
-    .about-info p  { font-size: 13px; color: #475569; line-height: 1.6; }
+    .success-msg { display: none; text-align: center; padding: 28px 0; }
+    .success-msg .icon { font-size: 56px; margin-bottom: 14px; }
+    .success-msg h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+    .success-msg p { color: #555; font-size: 14px; }
 
     /* FOOTER */
     footer {
-      background: #0f172a; color: #475569;
-      text-align: center; padding: 24px 20px;
-      font-size: 11.5px; line-height: 2;
+      background: #0f172a; color: #64748b;
+      text-align: center; padding: 28px 20px;
+      font-size: 12px; line-height: 2;
     }
     footer strong { color: #94a3b8; }
-    .disclaimer {
-      max-width: 580px; margin: 10px auto 0;
-      font-size: 10px; color: #334155; line-height: 1.7;
+    footer .disclaimer {
+      max-width: 600px; margin: 12px auto 0;
+      font-size: 10px; color: #475569; line-height: 1.7;
       padding-top: 10px; border-top: 1px solid #1e293b;
     }
 
-    @media(max-width:480px){
-      .stat-item { padding: 12px 16px; }
-      .form-box { padding: 24px 16px; }
-      .about-card { flex-direction: column; text-align: center; }
+    @media (max-width: 480px) {
+      .checkbox-group { grid-template-columns: 1fr; }
+      .form-container { padding: 26px 18px; }
     }
   </style>
 </head>
 <body>
 
-<!-- HERO -->
+<!-- 광고 표시 바 (금소법/보험업법 준수) -->
+<div class="ad-notice">
+  <strong>안내</strong> · 본 페이지는 재정 상담 연결을 위한 정보 수집 페이지입니다 · 금융소비자보호법에 따른 광고 게시물
+</div>
+
+<!-- HERO — 정보성 후킹 (보험상품 직접 광고 아님) -->
 <section class="hero">
-  <div class="channel-tag">📊 머니멘토 | 재정 정보 채널</div>
-  <h1>직장인이라면 꼭 챙겨야 할<br><em>절세 체크리스트 25가지</em></h1>
-  <p class="desc">연말정산 환급금을 최대로 받는 방법,<br>아직도 모르고 계셨나요?</p>
-  <p class="sub">무료로 다운로드하세요. 이메일 주소 하나면 충분합니다.</p>
-
-  <div class="pdf-preview">
-    <div class="pdf-icon">📄</div>
-    <div class="pdf-info">
-      <div class="pdf-title">직장인 절세 완전 체크리스트 2026</div>
-      <div class="pdf-meta">PDF · 1페이지 · 25가지 항목 · 즉시 다운로드</div>
-    </div>
-  </div>
-
+  <div class="badge">📊 무료 재정 건강 체크업</div>
+  <h1>우리 가족 재정,<br><span>괜찮은 걸까요?</span></h1>
+  <p>수입은 있는데 노후 준비는 안 되고,</p>
+  <p>매달 돈은 나가는데 뭘 위한 건지 모르겠다면</p>
+  <p class="sub">지금 바로 무료로 확인해보세요. 15분이면 충분합니다.</p>
   <div class="hero-arrow">↓</div>
 </section>
 
-<!-- STATS -->
-<div class="stats">
-  <div class="stat-item"><div class="stat-num">25가지</div><div class="stat-label">절세 체크 항목</div></div>
-  <div class="stat-item"><div class="stat-num">평균 87만원</div><div class="stat-label">추가 환급 가능 금액</div></div>
-  <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">무료 제공</div></div>
+<!-- TRUST -->
+<div class="trust">
+  <div class="trust-item"><span class="icon">🔍</span> 현재 재정 상태 진단</div>
+  <div class="trust-item"><span class="icon">🆓</span> 완전 무료, 강요 없음</div>
+  <div class="trust-item"><span class="icon">🔒</span> 개인정보 안전 보호</div>
+  <div class="trust-item"><span class="icon">⏱️</span> 24시간 내 연락</div>
 </div>
 
-<!-- PREVIEW -->
-<div class="section-white">
-  <div class="sw">
-    <div class="si">
-      <h2>체크리스트 미리보기</h2>
-      <p class="sub2">이런 항목들이 담겨 있습니다</p>
-      <div class="preview-grid">
-        <div class="preview-item">
-          <span class="emoji">💳</span>
-          <div>
-            <h4>신용카드·체크카드 공제</h4>
-            <p>체크카드와 현금영수증이 공제율이 더 높다는 사실, 알고 계셨나요?</p>
-          </div>
-          <div class="badge">최대 300만원</div>
+<!-- CHECKLIST — 공감형 후킹 -->
+<div class="section-bg-white">
+  <div class="section-wrapper">
+    <div class="section-inner">
+      <h2>혹시 이런 고민 있으신가요?</h2>
+      <p class="subtitle">대한민국 직장인 10명 중 7명이 비슷한 고민을 갖고 있습니다</p>
+      <ul class="check-list">
+        <li><span class="emoji">📉</span><span>매달 통장에서 돈이 빠져나가는데, 정작 노후 준비는 하나도 안 된 것 같아요</span></li>
+        <li><span class="emoji">🤷</span><span>각종 금융 상품에 가입해 뒀는데, 내가 실제로 뭘 받을 수 있는지 잘 모르겠어요</span></li>
+        <li><span class="emoji">💸</span><span>매달 고정 지출이 너무 많은데, 줄일 수 있는 건지 파악이 안 돼요</span></li>
+        <li><span class="emoji">👨‍👩‍👧</span><span>아이가 생겼는데, 가족을 위해 뭘 먼저 준비해야 할지 모르겠어요</span></li>
+        <li><span class="emoji">📋</span><span>연말정산 때 세액공제를 더 받을 수 있다는데, 어떻게 해야 하는지 몰라요</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- 진단 주제 -->
+<div class="section-bg-gray">
+  <div class="section-wrapper">
+    <div class="section-inner">
+      <h2>무료 체크업으로 알 수 있는 것</h2>
+      <p class="subtitle">상담 후 아래 항목들을 명확하게 파악할 수 있습니다</p>
+      <div class="topics-grid">
+        <div class="topic-card">
+          <div class="icon">🏥</div>
+          <h3>건강 보장 현황</h3>
+          <p>내가 받을 수 있는 의료비 보장 파악</p>
         </div>
-        <div class="preview-item">
-          <span class="emoji">🏖️</span>
-          <div>
-            <h4>연금저축 + IRP 세액공제</h4>
-            <p>연간 최대 148만원을 세금으로 돌려받을 수 있습니다. 연말 전 납입 필수.</p>
-          </div>
-          <div class="badge">최대 148만원</div>
+        <div class="topic-card">
+          <div class="icon">🌅</div>
+          <h3>노후 준비 상태</h3>
+          <p>은퇴 후 월 수입 예상 및 부족분 파악</p>
         </div>
-        <div class="preview-item">
-          <span class="emoji">🏠</span>
-          <div>
-            <h4>월세 세액공제</h4>
-            <p>월세 내는 무주택 직장인이라면 월세의 최대 17%를 돌려받을 수 있습니다.</p>
-          </div>
-          <div class="badge">최대 135만원</div>
+        <div class="topic-card">
+          <div class="icon">👶</div>
+          <h3>자녀 재정 준비</h3>
+          <p>교육비·성인까지 보장 준비 현황</p>
         </div>
-        <!-- Blurred items -->
-        <div class="blur-section">
-          <div class="blur-inner">
-            <div class="preview-item" style="margin-bottom:10px">
-              <span class="emoji">👶</span>
-              <div><h4>자녀 세액공제 + 출산공제</h4><p>자녀가 있다면 놓치면 안 되는 필수 항목입니다.</p></div>
-              <div class="badge">최대 70만원</div>
-            </div>
-            <div class="preview-item">
-              <span class="emoji">⚠️</span>
-              <div><h4>놓치기 쉬운 항목 5가지</h4><p>안경, 중고차, 산후조리원... 의외로 모르는 공제들</p></div>
-              <div class="badge">+추가 환급</div>
-            </div>
-          </div>
-          <div class="blur-overlay">
-            <button class="blur-cta-btn" onclick="document.getElementById('formSection').scrollIntoView({behavior:'smooth'})">
-              📥 무료로 전체 내용 받기
-            </button>
-          </div>
+        <div class="topic-card">
+          <div class="icon">💰</div>
+          <h3>절세 가능 항목</h3>
+          <p>연말정산 세액공제 최적화 여부</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ABOUT -->
-<div class="section-gray">
-  <div class="sw">
-    <div class="si">
-      <h2>머니멘토는 누구인가요?</h2>
-      <p class="sub2">재정 정보를 쉽게 풀어드리는 채널입니다</p>
-      <div class="about-card">
-        <div class="about-avatar">🧭</div>
-        <div class="about-info">
-          <h3>머니멘토</h3>
-          <p>
-            복잡한 재정 정보를 누구나 이해할 수 있게 정리해드립니다.<br>
-            절세·노후 준비·가계 재정 분야의 콘텐츠를 무료로 제공하며,<br>
-            필요하신 분께는 1:1 개인 재정 상담도 연결해드립니다.
-          </p>
+<!-- PROCESS -->
+<div class="section-bg-white">
+  <div class="section-wrapper">
+    <div class="section-inner">
+      <h2>진행 방법</h2>
+      <p class="subtitle">간단하게 3단계로 진행됩니다</p>
+      <div class="process-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>아래 신청서 작성 (2분)</h3>
+            <p>이름, 연락처, 궁금한 점만 간단히 적어주시면 됩니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>재정 전문가 연락 (24시간 내)</h3>
+            <p>담당자가 편하신 방법으로 연락드립니다. 전화·문자·카카오 모두 가능합니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>맞춤 재정 현황 안내</h3>
+            <p>현재 상황을 점검하고 개선 방향을 안내드립니다. 가입 강요는 절대 없습니다.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -309,109 +349,190 @@
 </div>
 
 <!-- FORM -->
-<section class="form-section" id="formSection">
-  <div class="form-box">
+<section class="form-section" id="apply">
+  <div class="form-container">
     <div id="formContent">
-      <h2>📥 무료 체크리스트 받기</h2>
-      <p class="form-sub">아래 정보를 입력하시면 즉시 다운로드 링크를 보내드립니다</p>
+      <h2>📋 무료 체크업 신청</h2>
+      <p class="form-sub">아래 정보를 입력하시면 빠르게 연락드립니다</p>
 
-      <form id="leadForm" onsubmit="handleSubmit(event)">
+      <form id="consultForm" onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label>이름 <span class="req">*</span></label>
           <input type="text" id="name" placeholder="홍길동" required />
         </div>
+
         <div class="form-group">
           <label>연락처 <span class="req">*</span></label>
-          <input type="tel" id="phone" placeholder="010-0000-0000" required oninput="formatPhone(this)" />
+          <input type="tel" id="phone" placeholder="010-0000-0000" required
+            oninput="formatPhone(this)" />
         </div>
+
         <div class="form-group">
           <label>연령대 <span class="req">*</span></label>
           <select id="age" required>
             <option value="">선택해 주세요</option>
-            <option>20대</option><option>30대</option>
-            <option>40대</option><option>50대</option><option>60대 이상</option>
+            <option>20대</option>
+            <option>30대</option>
+            <option>40대</option>
+            <option>50대</option>
+            <option>60대 이상</option>
           </select>
         </div>
 
+        <div class="form-group">
+          <label>가장 궁금한 것 <span class="req">*</span> (복수 선택 가능)</label>
+          <div class="checkbox-group">
+            <label class="checkbox-item">
+              <input type="checkbox" name="topic" value="건강·의료비 보장" />
+              <span>🏥 건강·의료비</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="topic" value="노후·연금 준비" />
+              <span>🌅 노후·연금</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="topic" value="자녀 재정 준비" />
+              <span>👶 자녀 준비</span>
+            </label>
+            <label class="checkbox-item">
+              <input type="checkbox" name="topic" value="절세·세액공제" />
+              <span>💰 절세·공제</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>상담 가능 시간</label>
+          <select id="time">
+            <option value="">상관없음</option>
+            <option>평일 오전 (9~12시)</option>
+            <option>평일 오후 (12~18시)</option>
+            <option>평일 저녁 (18~21시)</option>
+            <option>주말</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>궁금하신 점 (선택)</label>
+          <textarea id="memo" rows="3" placeholder="예) 매달 얼마씩 내고 있는데 노후 준비가 충분한지 모르겠어요"></textarea>
+        </div>
+
+        <!-- 동의 영역 (필수) -->
         <div class="consent-box">
           <div class="consent-title">📌 정보 수집 및 활용 동의</div>
-          <label class="consent-row">
+
+          <label class="consent-item">
             <input type="checkbox" id="agreePrivacy" required />
-            <span><strong>[필수]</strong><span class="badge-req">필수</span> 개인정보 수집·이용 동의<br>
-            <span class="consent-detail">수집: 이름·연락처·연령대 / 목적: 자료 발송 및 재정 정보 제공 / 보유: 1년</span></span>
+            <span class="consent-text">
+              <strong>[필수]</strong><span class="req-badge">필수</span>
+              개인정보 수집·이용에 동의합니다.<br>
+              <span style="color:#94a3b8; font-size:11px;">수집 항목: 이름, 연락처, 연령대 / 목적: 재정 상담 연결 / 보유기간: 상담 완료 후 1년</span>
+            </span>
           </label>
-          <label class="consent-row">
+
+          <label class="consent-item">
+            <input type="checkbox" id="agreeThirdParty" required />
+            <span class="consent-text">
+              <strong>[필수]</strong><span class="req-badge">필수</span>
+              개인정보 제3자 제공에 동의합니다.<br>
+              <span style="color:#94a3b8; font-size:11px;">제공 대상: 담당 재정 상담사 / 제공 목적: 상담 연결</span>
+            </span>
+          </label>
+
+          <label class="consent-item">
             <input type="checkbox" id="agreeMarketing" />
-            <span><strong>[선택]</strong><span class="badge-opt">선택</span> 재정 정보 수신 동의<br>
-            <span class="consent-detail">절세·노후·재정 관련 유용한 정보를 문자/카카오로 받아보실 수 있습니다.</span></span>
+            <span class="consent-text">
+              <strong>[선택]</strong><span class="opt-badge">선택</span>
+              광고성 정보 수신에 동의합니다.<br>
+              <span style="color:#94a3b8; font-size:11px;">재정 관련 유익한 정보, 이벤트 안내 등을 문자/카카오로 받아보실 수 있습니다. 미동의 시에도 상담은 정상 진행됩니다.</span>
+            </span>
           </label>
         </div>
 
-        <button type="submit" class="submit-btn">📄 체크리스트 무료 받기 →</button>
-        <p class="privacy-note">🔒 스팸 절대 없음 · 언제든 수신 거부 가능</p>
+        <button type="submit" class="submit-btn" id="submitBtn">무료 체크업 신청하기 →</button>
+        <p class="privacy-note">🔒 입력하신 정보는 상담 목적 외 사용되지 않으며 안전하게 보호됩니다.</p>
       </form>
     </div>
 
-    <!-- 성공 -->
-    <div class="success" id="successMsg">
-      <div class="big">🎉</div>
-      <h3>다운로드 준비 완료!</h3>
-      <p>아래 버튼을 눌러 체크리스트를 받아가세요.<br><br>
-      추가로 재정 관련 궁금한 점이 있으시면<br>카카오 채널 <strong>@머니멘토</strong>로 편하게 문의해 주세요.</p>
-      <!-- 실제 PDF URL로 교체하세요 -->
-      <a class="download-btn" href="절세_체크리스트.pdf" download>
-        📥 체크리스트 다운로드
-      </a>
+    <!-- 성공 메시지 -->
+    <div class="success-msg" id="successMsg">
+      <div class="icon">✅</div>
+      <h3>신청이 완료되었습니다!</h3>
+      <p>입력하신 연락처로<br>영업일 기준 <strong>24시간 내</strong> 연락드리겠습니다.</p>
+      <br>
+      <p style="color:#999; font-size:12px;">문의: [전화번호] | 카카오: @채널명</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <strong>머니멘토</strong> · 재정 정보 채널<br>
-  카카오 채널: @머니멘토 &nbsp;|&nbsp; 문의: [연락처]
+  <strong>[설계사 이름]</strong> · 재정 상담 전문<br>
+  <!-- ▼ 아래 정보를 본인 정보로 교체하세요 -->
+  소속: [보험사명] · 등록번호: [보험설계사 등록번호]<br>
+  연락처: 010-0000-0000 · 카카오채널: @채널명
   <div class="disclaimer">
-    본 페이지에서 제공하는 자료는 일반적인 정보 제공을 목적으로 하며, 개인의 상황에 따라 결과가 다를 수 있습니다.
-    세금 관련 최종 판단은 세무사 등 전문가와 상담하시기 바랍니다.
-    수집된 개인정보는 자료 발송 및 정보 제공 외 목적으로 사용되지 않습니다.
+    본 페이지는 금융소비자보호법 및 보험업법에 따른 광고 게시물입니다.
+    재정 상담은 개인의 상황에 따라 결과가 다를 수 있으며, 특정 금융상품의 가입을 강요하지 않습니다.
+    본 상담 신청은 정보 제공을 위한 연결 서비스이며, 최종 계약 체결 여부는 소비자가 결정합니다.
   </div>
 </footer>
 
 <script>
-  function formatPhone(el) {
-    let v = el.value.replace(/\D/g,'');
-    if (v.length<=3) el.value=v;
-    else if (v.length<=7) el.value=v.slice(0,3)+'-'+v.slice(3);
-    else el.value=v.slice(0,3)+'-'+v.slice(3,7)+'-'+v.slice(7,11);
+  function formatPhone(input) {
+    let v = input.value.replace(/\D/g, '');
+    if (v.length <= 3) input.value = v;
+    else if (v.length <= 7) input.value = v.slice(0,3) + '-' + v.slice(3);
+    else input.value = v.slice(0,3) + '-' + v.slice(3,7) + '-' + v.slice(7,11);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!document.getElementById('agreePrivacy').checked) {
-      alert('개인정보 수집 동의는 필수입니다.'); return;
+
+    const agreePrivacy     = document.getElementById('agreePrivacy').checked;
+    const agreeThirdParty  = document.getElementById('agreeThirdParty').checked;
+    if (!agreePrivacy || !agreeThirdParty) {
+      alert('필수 동의 항목에 모두 체크해 주세요.');
+      return;
     }
+
+    const topics = [...document.querySelectorAll('input[name="topic"]:checked')]
+                    .map(el => el.value).join(', ');
+    if (!topics) {
+      alert('가장 궁금한 항목을 하나 이상 선택해 주세요.');
+      return;
+    }
+
     const data = {
-      name:  document.getElementById('name').value,
-      phone: document.getElementById('phone').value,
-      age:   document.getElementById('age').value,
+      name:           document.getElementById('name').value,
+      phone:          document.getElementById('phone').value,
+      age:            document.getElementById('age').value,
+      topics,
+      time:           document.getElementById('time').value,
+      memo:           document.getElementById('memo').value,
       agreeMarketing: document.getElementById('agreeMarketing').checked,
-      timestamp: new Date().toLocaleString('ko-KR'),
-      source: '랜딩페이지_절세체크리스트'
+      timestamp:      new Date().toLocaleString('ko-KR')
     };
 
     // ============================================================
-    // Google Apps Script URL 입력
+    // Google Apps Script 웹앱 URL을 아래에 입력하세요
     // ============================================================
     const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
     if (SCRIPT_URL !== 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-      fetch(SCRIPT_URL, { method:'POST', mode:'no-cors',
-        headers:{'Content-Type':'application/json'}, body:JSON.stringify(data) });
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain' },
+        body: JSON.stringify(data)
+      });
     }
 
     document.getElementById('formContent').style.display = 'none';
     document.getElementById('successMsg').style.display  = 'block';
-    console.log('Lead captured:', data);
+    console.log('신청 데이터:', data);
   }
 </script>
+
 </body>
 </html>

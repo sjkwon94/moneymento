@@ -3,28 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>재정 건강 무료 체크업 | 노후·가계 재정 진단</title>
+  <title>재정 건강 무료 체크업 | 머니멘토</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     body {
       font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
       background: #f5f7fa;
       color: #222;
       line-height: 1.6;
     }
-
-    /* 광고 상단 표시 바 */
-    .ad-notice {
-      background: #1e293b;
-      color: #94a3b8;
-      text-align: center;
-      padding: 7px 16px;
-      font-size: 11px;
-      letter-spacing: 0.3px;
-    }
-    .ad-notice strong { color: #cbd5e1; }
-
     /* HERO */
     .hero {
       background: linear-gradient(135deg, #0f4c81 0%, #1d6fa4 100%);
@@ -63,7 +50,6 @@
       0%,100% { transform: translateY(0); }
       50%      { transform: translateY(8px); }
     }
-
     /* TRUST */
     .trust {
       background: white;
@@ -76,16 +62,13 @@
     }
     .trust-item { display: flex; align-items: center; gap: 6px; font-size: 13px; color: #555; }
     .trust-item .icon { font-size: 17px; }
-
     /* SECTIONS */
     .section-bg-white { background: white; }
     .section-bg-gray  { background: #f5f7fa; }
     .section-wrapper  { padding: 48px 20px; }
     .section-inner    { max-width: 720px; margin: 0 auto; }
-
     h2 { font-size: clamp(19px, 4vw, 27px); font-weight: 700; text-align: center; margin-bottom: 8px; }
     .subtitle { text-align: center; color: #666; font-size: 14px; margin-bottom: 30px; }
-
     /* CHECKLIST */
     .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .check-list li {
@@ -97,7 +80,6 @@
       font-size: 15px;
     }
     .check-list .emoji { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
-
     /* TOPICS GRID */
     .topics-grid {
       display: grid;
@@ -117,7 +99,6 @@
     .topic-card .icon { font-size: 30px; margin-bottom: 10px; }
     .topic-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
     .topic-card p  { font-size: 12px; color: #777; }
-
     /* PROCESS */
     .process-steps { display: flex; flex-direction: column; gap: 14px; }
     .step {
@@ -132,7 +113,6 @@
     }
     .step-content h3 { font-size: 15px; font-weight: 700; margin-bottom: 3px; }
     .step-content p  { font-size: 13px; color: #555; }
-
     /* FORM */
     .form-section { background: linear-gradient(135deg, #0f4c81 0%, #1d6fa4 100%); padding: 48px 20px; }
     .form-container {
@@ -142,7 +122,6 @@
     }
     .form-container h2 { font-size: 21px; font-weight: 800; margin-bottom: 6px; }
     .form-sub { text-align: center; color: #666; font-size: 13px; margin-bottom: 26px; }
-
     .form-group { margin-bottom: 16px; }
     .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; color: #333; }
     .form-group label .req { color: #ef4444; margin-left: 2px; }
@@ -155,7 +134,6 @@
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
       outline: none; border-color: #1d6fa4; background: white;
     }
-
     .checkbox-group {
       display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 4px;
     }
@@ -167,7 +145,6 @@
     .checkbox-item:hover { background: #eff6ff; border-color: #93c5fd; }
     .checkbox-item input[type="checkbox"] { width: 15px; height: 15px; accent-color: #1d6fa4; }
     .checkbox-item span { font-size: 12px; font-weight: 500; }
-
     /* 동의 영역 */
     .consent-box {
       background: #f8fafc;
@@ -202,7 +179,6 @@
       font-size: 10px; padding: 1px 5px; border-radius: 3px;
       margin-left: 4px; vertical-align: middle;
     }
-
     .submit-btn {
       width: 100%; padding: 15px;
       background: linear-gradient(135deg, #0f4c81 0%, #1d6fa4 100%);
@@ -213,15 +189,12 @@
     .submit-btn:hover { opacity: 0.92; transform: translateY(-1px); }
     .submit-btn:active { transform: translateY(0); }
     .submit-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-
     .privacy-note { text-align: center; font-size: 11px; color: #999; margin-top: 12px; }
-
     /* SUCCESS */
     .success-msg { display: none; text-align: center; padding: 28px 0; }
     .success-msg .icon { font-size: 56px; margin-bottom: 14px; }
     .success-msg h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
     .success-msg p { color: #555; font-size: 14px; }
-
     /* FOOTER */
     footer {
       background: #0f172a; color: #64748b;
@@ -234,7 +207,6 @@
       font-size: 10px; color: #475569; line-height: 1.7;
       padding-top: 10px; border-top: 1px solid #1e293b;
     }
-
     @media (max-width: 480px) {
       .checkbox-group { grid-template-columns: 1fr; }
       .form-container { padding: 26px 18px; }
@@ -243,12 +215,7 @@
 </head>
 <body>
 
-<!-- 광고 표시 바 (금소법/보험업법 준수) -->
-<div class="ad-notice">
-  <strong>안내</strong> · 본 페이지는 재정 상담 연결을 위한 정보 수집 페이지입니다 · 금융소비자보호법에 따른 광고 게시물
-</div>
-
-<!-- HERO — 정보성 후킹 (보험상품 직접 광고 아님) -->
+<!-- HERO -->
 <section class="hero">
   <div class="badge">📊 무료 재정 건강 체크업</div>
   <h1>우리 가족 재정,<br><span>괜찮은 걸까요?</span></h1>
@@ -266,7 +233,7 @@
   <div class="trust-item"><span class="icon">⏱️</span> 24시간 내 연락</div>
 </div>
 
-<!-- CHECKLIST — 공감형 후킹 -->
+<!-- CHECKLIST -->
 <div class="section-bg-white">
   <div class="section-wrapper">
     <div class="section-inner">
@@ -354,19 +321,16 @@
     <div id="formContent">
       <h2>📋 무료 체크업 신청</h2>
       <p class="form-sub">아래 정보를 입력하시면 빠르게 연락드립니다</p>
-
       <form id="consultForm" onsubmit="handleSubmit(event)">
         <div class="form-group">
           <label>이름 <span class="req">*</span></label>
           <input type="text" id="name" placeholder="홍길동" required />
         </div>
-
         <div class="form-group">
           <label>연락처 <span class="req">*</span></label>
           <input type="tel" id="phone" placeholder="010-0000-0000" required
             oninput="formatPhone(this)" />
         </div>
-
         <div class="form-group">
           <label>연령대 <span class="req">*</span></label>
           <select id="age" required>
@@ -378,7 +342,6 @@
             <option>60대 이상</option>
           </select>
         </div>
-
         <div class="form-group">
           <label>가장 궁금한 것 <span class="req">*</span> (복수 선택 가능)</label>
           <div class="checkbox-group">
@@ -400,7 +363,6 @@
             </label>
           </div>
         </div>
-
         <div class="form-group">
           <label>상담 가능 시간</label>
           <select id="time">
@@ -411,16 +373,13 @@
             <option>주말</option>
           </select>
         </div>
-
         <div class="form-group">
           <label>궁금하신 점 (선택)</label>
           <textarea id="memo" rows="3" placeholder="예) 매달 얼마씩 내고 있는데 노후 준비가 충분한지 모르겠어요"></textarea>
         </div>
-
-        <!-- 동의 영역 (필수) -->
+        <!-- 동의 영역 -->
         <div class="consent-box">
           <div class="consent-title">📌 정보 수집 및 활용 동의</div>
-
           <label class="consent-item">
             <input type="checkbox" id="agreePrivacy" required />
             <span class="consent-text">
@@ -429,7 +388,6 @@
               <span style="color:#94a3b8; font-size:11px;">수집 항목: 이름, 연락처, 연령대 / 목적: 재정 상담 연결 / 보유기간: 상담 완료 후 1년</span>
             </span>
           </label>
-
           <label class="consent-item">
             <input type="checkbox" id="agreeThirdParty" required />
             <span class="consent-text">
@@ -438,7 +396,6 @@
               <span style="color:#94a3b8; font-size:11px;">제공 대상: 담당 재정 상담사 / 제공 목적: 상담 연결</span>
             </span>
           </label>
-
           <label class="consent-item">
             <input type="checkbox" id="agreeMarketing" />
             <span class="consent-text">
@@ -448,33 +405,28 @@
             </span>
           </label>
         </div>
-
         <button type="submit" class="submit-btn" id="submitBtn">무료 체크업 신청하기 →</button>
         <p class="privacy-note">🔒 입력하신 정보는 상담 목적 외 사용되지 않으며 안전하게 보호됩니다.</p>
       </form>
     </div>
-
     <!-- 성공 메시지 -->
     <div class="success-msg" id="successMsg">
       <div class="icon">✅</div>
       <h3>신청이 완료되었습니다!</h3>
       <p>입력하신 연락처로<br>영업일 기준 <strong>24시간 내</strong> 연락드리겠습니다.</p>
       <br>
-      <p style="color:#999; font-size:12px;">문의: [전화번호] | 카카오: @채널명</p>
+      <p style="color:#999; font-size:12px;">문의: rnjschd94@gmail.com</p>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <strong>[설계사 이름]</strong> · 재정 상담 전문<br>
-  <!-- ▼ 아래 정보를 본인 정보로 교체하세요 -->
-  소속: [보험사명] · 등록번호: [보험설계사 등록번호]<br>
-  연락처: 010-0000-0000 · 카카오채널: @채널명
+  <strong>머니멘토</strong> · 재정 정보 콘텐츠<br>
+  문의: rnjschd94@gmail.com
   <div class="disclaimer">
-    본 페이지는 금융소비자보호법 및 보험업법에 따른 광고 게시물입니다.
-    재정 상담은 개인의 상황에 따라 결과가 다를 수 있으며, 특정 금융상품의 가입을 강요하지 않습니다.
-    본 상담 신청은 정보 제공을 위한 연결 서비스이며, 최종 계약 체결 여부는 소비자가 결정합니다.
+    본 페이지는 재정 정보 제공을 목적으로 하며, 특정 금융상품의 판매를 권유하지 않습니다.<br>
+    제공되는 정보는 일반적인 재정 교육 목적이며, 개인별 상황에 따라 결과가 다를 수 있습니다.
   </div>
 </footer>
 
@@ -488,21 +440,18 @@
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    const agreePrivacy     = document.getElementById('agreePrivacy').checked;
-    const agreeThirdParty  = document.getElementById('agreeThirdParty').checked;
+    const agreePrivacy    = document.getElementById('agreePrivacy').checked;
+    const agreeThirdParty = document.getElementById('agreeThirdParty').checked;
     if (!agreePrivacy || !agreeThirdParty) {
       alert('필수 동의 항목에 모두 체크해 주세요.');
       return;
     }
-
     const topics = [...document.querySelectorAll('input[name="topic"]:checked')]
                     .map(el => el.value).join(', ');
     if (!topics) {
       alert('가장 궁금한 항목을 하나 이상 선택해 주세요.');
       return;
     }
-
     const data = {
       name:           document.getElementById('name').value,
       phone:          document.getElementById('phone').value,
@@ -514,11 +463,7 @@
       timestamp:      new Date().toLocaleString('ko-KR')
     };
 
-    // ============================================================
-    // Google Apps Script 웹앱 URL을 아래에 입력하세요
-    // ============================================================
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5clVvltxa3qtvpGLasz9t8oF-PNwcPlUMeeiR76IAAhR01D68TY88V6Xoy7EtAYe7oQ/exec';
-
     fetch(SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
@@ -531,6 +476,5 @@
     console.log('신청 데이터:', data);
   }
 </script>
-
 </body>
 </html>
